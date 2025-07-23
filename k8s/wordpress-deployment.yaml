@@ -29,6 +29,13 @@ spec:
                 secretKeyRef:
                   name: wp-secret
                   key: WORDPRESS_DB_PASSWORD
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "130Mi"
+            limits:
+              cpu: "150m"
+              memory: "390Mi"
           volumeMounts:
             - name: wp-volume
               mountPath: /var/www/html

@@ -30,6 +30,13 @@ spec:
                 secretKeyRef:
                   name: wp-secret
                   key: MYSQL_ROOT_PASSWORD
+          resources:
+            requests:
+              cpu: "55m"
+              memory: "220Mi"
+            limits:
+              cpu: "165m"
+              memory: "660Mi"
           volumeMounts:
             - name: db-volume
               mountPath: /var/lib/mysql
